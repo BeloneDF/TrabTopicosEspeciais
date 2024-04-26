@@ -13,9 +13,6 @@
 
         public string Nascimento { get; set; }
 
-        public int CodigoVenda { get; set; }
-
-        public Venda Venda { get; set; }
 
     }
 }

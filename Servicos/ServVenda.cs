@@ -23,6 +23,7 @@ namespace Servicos
             var venda = new Venda();
 
             venda.Id = inserirVendaDto.Id;
+            venda.Valor = inserirVendaDto.Valor;
             venda.CodigoLivro = inserirVendaDto.CodigoLivro;
 
             _repoVenda.Inserir(venda);
