@@ -18,6 +18,12 @@ builder.Services.AddDbContext<DataContext>(option =>
 builder.Services.AddScoped<IServLivro, ServLivro>();
 builder.Services.AddScoped<IRepoLivro, RepoLivro>();
 
+builder.Services.AddScoped<IServVenda, ServVenda>();
+builder.Services.AddScoped<IRepoVenda, RepoVenda>();
+
+builder.Services.AddScoped<IServFuncionario, ServFuncionario>();
+builder.Services.AddScoped<IRepoFuncionario, RepoFuncionario>();
+
 
 var app = builder.Build();
 
