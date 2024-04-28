@@ -8,6 +8,7 @@ namespace Repositorio
         void Editar(Funcionario funcionario);
         List<Funcionario> BuscarTodos();
         void Remover(Funcionario funcionario);
+        Funcionario BuscarPorId(int id);
     }
 
     public class RepoFuncionario : IRepoFuncionario
@@ -24,6 +25,12 @@ namespace Repositorio
             _dataContext.Add(funcionario);
 
             _dataContext.SaveChanges();
+        }
+        public Funcionario BuscarPorId(int id)
+        {
+            var funcionario = _dataContext.Funcionario.Where(p => p.Id == id).FirstOrDefault();
+
+            return funcionario;
         }
 
         public void Editar(Funcionario funcionario)

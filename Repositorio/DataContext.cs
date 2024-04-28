@@ -25,6 +25,7 @@ namespace Repositorio
 
             modelBuilder.Entity<Venda>().HasKey(p => p.Id);
             modelBuilder.Entity<Venda>().HasOne(p => p.Livro).WithMany().HasForeignKey(p => p.CodigoLivro);
+            modelBuilder.Entity<Venda>().HasOne(p => p.Funcionario).WithMany().HasForeignKey(p => p.CodigoFuncionario);
 
             modelBuilder.Entity<Funcionario>().HasKey(p => p.Id);
 

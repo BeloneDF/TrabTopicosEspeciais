@@ -10,9 +10,11 @@ namespace Servicos
     {
         public int Id { get; set; }
 
-        public int Valor { get; set; }
+        public string Valor { get; set; }
 
         public int CodigoLivro { get; set; }
+
+        public int CodigoFuncionario { get; set; }
 
     }
 }
