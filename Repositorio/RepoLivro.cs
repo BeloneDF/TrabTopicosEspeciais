@@ -35,9 +35,9 @@ namespace Repositorio
 
         public List<Livro> BuscarTodos()
         {
-            var pizzarias = _dataContext.Livro.ToList();
+            var livros = _dataContext.Livro.ToList();
 
-            return pizzarias;
+            return livros;
         }
 
         public Livro BuscarPorId(int id)

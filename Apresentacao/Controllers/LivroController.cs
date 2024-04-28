@@ -52,14 +52,14 @@ namespace Apresentacao
             {
                 var livros = _servLivro.BuscarTodos();
 
-                var pizzariaEnxuta = livros.Select(p =>
+                var livroEnxuto = livros.Select(p =>
                     new
                     {
                         Id = p.Id,
                         Titulo = p.Titulo
                     }).ToList();
 
-                return Ok(pizzariaEnxuta);
+                return Ok(livroEnxuto);
             }
             catch (Exception e)
             {
@@ -73,9 +73,9 @@ namespace Apresentacao
         {
             try
             {
-                var pizzaria = _servLivro.BuscarPorId(id);
+                var livro = _servLivro.BuscarPorId(id);
 
-                return Ok(pizzaria);
+                return Ok(livro);
             }
             catch (Exception e)
             {
